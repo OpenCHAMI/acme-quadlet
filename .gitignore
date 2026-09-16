@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: © 2026 OpenCHAMI a Series of LF Projects, LLC
+#
+# SPDX-License-Identifier: MIT
+
+dist/
+
+# AI coding agent artifacts
+CLAUDE/
+.omo/
+graphify-out/cache/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

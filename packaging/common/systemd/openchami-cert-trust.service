@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2026 OpenCHAMI Contributors
+# SPDX-License-Identifier: MIT
+
+[Unit]
+Description=Extract and trust OpenCHAMI root CA certificate
+Wants=step-ca.service
+After=step-ca.service
+PartOf=openchami.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'until podman cp step-ca:/root_ca/root_ca.crt /etc/pki/ca-trust/source/anchors/openchami.pem; do sleep 1; done'
+ExecStart=update-ca-trust
+StandardOutput=journal
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

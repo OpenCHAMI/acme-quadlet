@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: © 2026 OpenCHAMI a Series of LF Projects, LLC
+#
+# SPDX-License-Identifier: MIT
+
+name: Cleanup
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  cleanup:
+    uses: OpenCHAMI/github-actions/.github/workflows/pr-registry-cleanup.yml@v3.9
+    permissions:
+      packages: write

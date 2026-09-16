@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2026 OpenCHAMI Contributors
+# SPDX-License-Identifier: MIT
+
+[Unit]
+Description=Renew OpenCHAMI certificates
+
+[Service]
+Type=oneshot
+ExecStart=systemctl restart acme-deploy
+ExecStart=systemctl restart acme-register
+ExecStart=systemctl restart haproxy
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
