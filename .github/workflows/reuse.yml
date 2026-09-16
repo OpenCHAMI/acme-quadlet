@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: © 2026 OpenCHAMI a Series of LF Projects, LLC
+#
+# SPDX-License-Identifier: MIT
+
+name: REUSE
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  reuse:
+    uses: OpenCHAMI/github-actions/.github/workflows/reuse.yml@v3.11
