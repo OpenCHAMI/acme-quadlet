@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2026 OpenCHAMI Contributors
+# SPDX-FileCopyrightText: © 2026 OpenCHAMI a Series of LF Projects, LLC
 # SPDX-License-Identifier: MIT
 #
 # See `make rpm-build` for the tag-to-version mapping. The packaged image is
