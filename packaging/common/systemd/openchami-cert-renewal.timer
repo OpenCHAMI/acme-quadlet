@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: © 2026 OpenCHAMI a Series of LF Projects, LLC
+# SPDX-License-Identifier: MIT
+
+[Unit]
+Description=Renew OpenCHAMI certificates daily
+
+[Timer]
+OnUnitActiveSec=1d
+Persistent=true
+
+[Install]
+WantedBy=timers.target
